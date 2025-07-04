@@ -1,0 +1,63 @@
+{
+  "name": "Project",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Project name"
+    },
+    "location": {
+      "type": "string",
+      "description": "Area/district in Dubai"
+    },
+    "price_range": {
+      "type": "string",
+      "description": "Price range (e.g., AED 1.2M - 3.5M)"
+    },
+    "roi": {
+      "type": "string",
+      "description": "Expected ROI percentage"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "New Launch",
+        "Hot",
+        "Sold Out",
+        "Available",
+        "Coming Soon"
+      ],
+      "description": "Project status"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Project image URL"
+    },
+    "developer": {
+      "type": "string",
+      "description": "Developer name"
+    },
+    "completion_date": {
+      "type": "string",
+      "description": "Expected completion date"
+    },
+    "description": {
+      "type": "string",
+      "description": "Project description"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Key features of the project"
+    }
+  },
+  "required": [
+    "name",
+    "location",
+    "price_range",
+    "roi",
+    "status"
+  ]
+}
