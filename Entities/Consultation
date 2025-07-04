@@ -1,0 +1,41 @@
+{
+  "name": "Consultation",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Client name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Client email"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Client phone number"
+    },
+    "investment_budget": {
+      "type": "string",
+      "description": "Investment budget range"
+    },
+    "message": {
+      "type": "string",
+      "description": "Additional message or requirements"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "New",
+        "Contacted",
+        "Scheduled",
+        "Completed"
+      ],
+      "default": "New",
+      "description": "Consultation status"
+    }
+  },
+  "required": [
+    "name",
+    "email"
+  ]
+}
