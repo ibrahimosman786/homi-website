@@ -1,11 +1,11 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import FeaturedProjects from '../components/FeaturedProjects';
-import WhyDubai from '../components/WhyDubai';
-import ConsultationSection from '../components/Consultation';
-import Insights from '../components/Insights';
-import Footer from '../components/Footer';
+import Hero from '../components/hero.js';
+import About from '../components/about.js';
+import FeaturedProjects from '../components/featured-projects.js';
+import WhyDubai from '../components/whydubai.js';
+import ConsultationSection from '../components/consultation.js';
+import Insights from '../components/insights.js';
+import Footer from '../components/footer.js';
 
 export default function Home() {
   return (
