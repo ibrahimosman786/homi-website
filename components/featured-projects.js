@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Project } from '@/entities/Project';
+import projectData from '@/entities/project.json';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import Badge from '@/components/ui/badge';
 import { MapPin, Calendar, TrendingUp, Download } from 'lucide-react';
 
 export default function FeaturedProjects() {
