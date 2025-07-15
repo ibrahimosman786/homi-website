@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
+import Button from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
 
 export default function Hero() {
@@ -26,7 +26,7 @@ export default function Hero() {
           <img 
             src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/7c53b1b2e_HOMIlogo.png" 
             alt="HOMI Real Estate"
-            className="h-8 w-auto"
+            className="h-12 md:h-16 lg:h-24 w-auto"
           />
         </div>
         <div className="hidden md:flex items-center space-x-8">

@@ -40,7 +40,7 @@ export default function About() {
       university: "University of Alberta",
       color: "from-blue-500 to-blue-600",
       textColor: "text-blue-400",
-      imageUrl: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/545b02874_3f5721ee-fe9e-4115-a5e5-0224e9ccca86.jpg"
+      imageUrl: "/ibrahim.jpg"
     }
   ];
 
@@ -84,7 +84,7 @@ export default function About() {
                       <img 
                         src={founder.imageUrl} 
                         alt={`Headshot of ${founder.name}`} 
-                        className={`w-full h-full object-cover ${founder.name === 'Hassan Ahmad' ? 'object-top scale-110' : 'object-center scale-125'}`}
+                        className={`w-full h-full object-cover ${founder.name === 'Hassan Ahmad' ? 'object-top scale-110' : 'object-top scale-110'}`}
                       />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-1">{founder.name}</h3>

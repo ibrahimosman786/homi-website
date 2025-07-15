@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BlogPost } from '@/entities/BlogPost';
-import { Button } from '@/components/ui/button';
+import Button from '@/components/ui/button';
 import { Calendar, ArrowRight } from 'lucide-react';
 
 export default function Insights() {

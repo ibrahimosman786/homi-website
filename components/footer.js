@@ -12,7 +12,7 @@ export default function Footer() {
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/7c53b1b2e_HOMIlogo.png" 
                 alt="HOMI Real Estate"
-                className="h-8 w-auto"
+                className="h-12 md:h-16 lg:h-24 w-auto"
               />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">

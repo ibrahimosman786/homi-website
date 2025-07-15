@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Consultation } from '@/entities/Consultation';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import Button from '@/components/ui/button';
+import Input from '@/components/ui/input';
+import Label from '@/components/ui/label';
 import Textarea from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Calendar, MessageCircle, CheckCircle } from 'lucide-react';
@@ -21,9 +21,13 @@ export default function ConsultationSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     try {
-      await Consultation.create(formData);
+      const response = await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (!response.ok) throw new Error('Failed to submit');
       setIsSubmitted(true);
       setFormData({ name: '', email: '', phone: '', investment_budget: '', message: '' });
     } catch (error) {
@@ -49,6 +53,13 @@ export default function ConsultationSection() {
             <p className="text-xl text-gray-300 mb-8">
               Your consultation request has been submitted successfully. Our team will contact you within 24 hours.
             </p>
+            <a
+              href="/investing-in-dubai-guide.pdf"
+              download
+              className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 mb-4"
+            >
+              Download the Investing in Dubai Guide
+            </a>
             <Button 
               onClick={() => setIsSubmitted(false)}
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full"
